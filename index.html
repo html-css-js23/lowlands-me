@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>è«¾è­çæ</title>
+    <style>
+        * { outline: 0; }
+html { background: #fff; -webkit-text-size-adjust: none; }
+body { font-size: 12px; color: #333; width: 100%; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fieldset, lengend, button, input, textarea, th, td { margin: 0; padding: 0; }
+ol, ul, li { list-style: none; }
+address, caption, cite, code, dfn, em, th, var, i { font-weight: normal; font-style: normal; }
+a { text-decoration: none; color: #333; -webkit-transition-duration: .3s; -moz-transition-duration: .3s; -o-transition-duration: .3s; transition-duration: .3s; }
+img { border: 0; vertical-align: middle; }
+select, input, textarea { border: 0; outline: none; border-radius: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+div, dl, dt, dd, ol, ul, li { zoom: 1; }
+caption, th { text-align: left; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; }
+input, textarea { resize: none; outline: 0; box-sizing: content-box; }
+a:hover { text-decoration: none; }
+/*æ¸é¤æµ®å¨*/
+.clearfix:after { content: "."; display: block; height: 0; font-size: 0; clear: both; visibility: hidden; }
+.clearfix { +height:1%; }
+
+.wrap { width: 1200px; margin: 0 auto; }
+.fl { float: left; }
+.fr { float: right; }
+.center { text-align: center; }
+.right { text-align: right; }
+.middle_top,
+.middle { display: inline-block; *zoom: 1; *display: inline; }
+.middle { vertical-align: middle; }
+.middle_top { vertical-align: top; }
+.hide { display: none; }
+.disnone { display: none; }
+.pr { position: relative; }
+.pa { position: absolute; }
+.hidden { overflow: hidden; }
+
+
+
+
+/*å¤´é¨*/
+input::-webkit-input-placeholder { color: #999; }
+input::-ms-input-placeholder { color: #999; }
+input::-moz-placeholder { color: #999; }
+input::-moz-placeholder { color: #999; }
+
+/* åå®¹ */
+.logo{
+  top:10%;
+  right:8.2%;
+  width: 13%;
+}
+.headbg{
+	width: 100%;
+}
+.overview{
+	background: #fcfbfb;
+	padding:167px 0;
+}
+.cwrap{
+	/* width: 66%; */
+	width: 1200px;
+	margin:0 auto;
+}
+.overviewtit{
+	font-size: 38px;
+	margin-bottom: 45px;
+	text-align: center;
+}
+.overviewdesc{
+	margin-bottom: 25px;
+	font-size: 14px;
+	text-align: center;
+}
+.overviewbox{
+	padding:100px 0 125px;
+}
+.overviewitem{
+	float: left;
+	width: 33%;
+}
+.overviewimg{
+	width: 33%;
+	display: block;
+    margin:0 auto;
+}
+.overviewtitle{
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	margin:40px 0 30px;
+}
+.overviewp{
+	margin:0 auto;
+	width:75%;
+	font-size: 14px;
+	line-height: 30px;
+}
+.map{
+	width: 100%;
+}
+.director{
+	padding:152px 0 180px;
+	background: #000;
+}
+.director .overviewtit{
+	color:#fff;
+}
+.directorlist{
+	float: left;
+	position: relative;
+	width: 45%;
+	margin-right: 10%;
+	margin-bottom: 100px;
+	cursor: pointer;
+}
+.directorback{
+	box-sizing: border-box;
+	background-color: #ea6000;
+	color:#fff;
+	position: absolute;
+	padding:12%;
+	left:0;
+	top:0;
+	width: 100%;
+	height: 100%;
+}
+.directorback{
+	display: none;
+}
+.directorlist:hover .directorback{
+	display: block;
+	transition: 3s;
+}
+.directorback .directorname{
+	color:#fff;
+	margin-top:0;
+}
+.directorback .directordesc{
+	margin-bottom: 20px;
+}
+.director_backdesc{
+	margin-top: 20px;
+}
+.director_backdesc p{
+	font-size: 14px;
+	line-height: 28px;
+}
+.directorlist:nth-child(2n){
+	margin-right: 0;
+}
+.directorimg{
+	width: 100%;
+}
+.directorname{
+	font-size: 16px;
+	color:#ea6000;
+	margin:25px 0 15px;
+}
+.directordesc{
+	font-size: 14px;
+	color:#fff;
+	line-height: 28px;
+}
+.business{
+	padding-top: 60px;
+}
+.business_tap{
+	text-align: center;
+	margin-bottom: 90px;
+}
+.business_item{
+	display: inline-block;
+	height: 50px;
+	padding:0 35px;
+	line-height: 50px;
+	border:1px solid #fff;
+	border-radius:25px;
+	font-size: 16px;
+	text-align: center;
+	color:#fff;
+	margin-right: 54px;
+	cursor: pointer;
+}
+.business_item:nth-child(2){
+	margin-right: 0;
+}
+.business_item.on{
+	color:#ea6000;
+	border-color:#be4f02;
+	background: rgba(234,96,0,.25);
+}
+.business_list{
+	cursor: pointer;
+	position: relative;
+	width: 22%;
+	height: 260px;
+	float: left;
+	margin-right:4%;
+	background: #fff;
+	padding:35px 30px 20px;
+	box-sizing: border-box;
+}
+@media (any-hover: hover) {
+	.business_list:hover{
+		background: #ea6000;
+		transition: 1s;
+	}
+	.business_list:hover .business_back{
+		display: block;
+		transition: 1s;
+	}
+	.business_list:hover .business_front{
+		display: none;
+		transition: 2s;
+	}
+  }
+.business_list.on{
+	background: #ea6000;
+}
+.business_list.on .business_front{
+	display: none;
+	transition: 2s;
+}
+.business_list.on .business_back{
+	display: block;
+	transition: 1s;
+}
+.business_list:nth-child(4){
+	margin-right: 0;
+}
+.business_top{
+	margin-bottom: 80px;
+}
+.business_leftimg{
+	width: 68px;
+	float: left;
+}
+.business_numberimg{
+	width: 50px;
+	float: right;
+}
+.business_bottom{
+	text-align: right;
+}
+.business_tit{
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+.business_entit{
+	font-size: 12px;
+}
+.business_back .business_bottom{
+  margin-bottom: 20px;
+  text-align: left;
+}
+.business_back .business_tit,.business_back .business_entit{
+	color:#fff;  
+}
+.business_describe{
+	font-size: 14px;
+	line-height: 24px;
+	color:#fff;  
+}
+.arrowbox{
+	text-align: right;
+}
+.arrow{
+	width:48px;
+	position: absolute;
+	right:20px;
+	bottom:20px;
+}
+.business_front .business_bottom{
+	position: absolute;
+	bottom:35px;
+	right:20px;
+}
+.business_back{
+	display: none;
+}
+.business_describeleft{
+	width: 70px;
+}
+.office{
+	position: relative;
+}
+.office .overviewtit{
+	margin-bottom: 80px;
+}
+.officebg{
+	width: 100%;
+}
+.officebox{
+	padding-top:8%;
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+}
+.officeimg img{
+	float: left;
+   width: 30%;
+   margin-right: 4.5%;
+}
+.officeimg img:nth-child(3){
+	margin-right: 0;
+}
+.advantagebg{
+	width: 100%;
+}
+.advantage_content{
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	width: 1000px;
+	margin:0 auto;
+	z-index: 1;
+	padding-top: 190px;
+}
+.advantage_list img{
+	width: 62px;
+	display: block;
+	margin-bottom: 20px;
+}
+.advantage_tit{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.advantage_text{
+	font-size: 14px;
+	line-height: 28px;
+}
+.advantage_contentleft .advantage_list{
+	margin-bottom: 180px;
+}
+.advantage_contentright .advantage_list{
+	margin-bottom:100px;
+}
+.advantage_list:nth-last-child(1){
+	margin-bottom: 0!important;
+}
+.package{
+	background: #000;
+}
+.packagebg{
+	width: 100%;
+}
+.package_box{
+	top:0;
+	left: 0;
+	right: 0;
+}
+.package_content{
+	width: 750px;
+	margin:0 auto;
+}
+.package_box .overviewtit{
+	margin:100px auto 90px;
+	color:#fff;
+}
+.package_item{
+	display: inline-block;
+	width: 40%;
+	margin-right: 18%;
+}
+.package_item:nth-child(2){
+	margin-right:0;
+}
+.package_itemtop{
+	width: 280px;
+	height: 280px;
+	margin:0 auto 40px;
+	text-align: center;
+	border-radius: 140px;
+	border:1px solid #fff;
+}
+.package_img{
+	height: 78px;
+	margin:56px auto 20px;
+}
+.package_itemtit{
+	line-height: 30px;
+	font-size: 16px;
+	color: #fff;
+}
+.package_des{
+	text-align: center;
+	font-size: 14px;
+	color:#fff;
+	line-height: 28px;
+}
+.team{
+	padding-top: 140px;
+	background: #fcfbfb;
+}
+.team .overviewtit{
+	margin-bottom: 75px;
+}
+.team_list{
+	padding-bottom: 80px;
+}
+.teamimg{
+	width: 230px;
+}
+.team_text{
+	box-sizing: border-box;
+	padding:40px 50px;
+	border:1px solid #f6d1b8;
+	width: calc(100% - 265px);
+	background: #f5f5f5;
+}
+.team_tit{
+	margin-bottom: 20px;
+	font-size: 20px;
+	color:#ea6000;
+}
+.team_desc{
+	line-height: 28px;
+	font-size: 15px;
+	color:#595757;
+}
+.team_img{
+	width: 100%;
+	margin-bottom: 120px;
+}
+.customer{
+	padding-bottom: 280px;
+}
+.customerbg{
+	bottom:0;
+	left:0;
+	width: 100%;
+}
+.customer .overviewtit{
+	margin-bottom: 75px;
+}
+.customer_imgbox{
+	font-size: 0;
+}
+.leftimg{
+	width:720px;
+	margin-right: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+.righttimg{
+	width: calc(100% - 740px);
+	display: inline-block;
+}
+.leftimg img{
+	width: 100%;
+}
+.righttimg img{
+    width: 100%;
+}
+.righttimgtop{
+	margin-bottom: 20px;
+}
+.rbottomimg img{
+	width: calc(50% - 10px);
+}
+.rbottomimg_left{
+	margin-right: 20px;
+}
+@media screen and (max-width: 1700px) { 
+	.advantage_content{
+		padding-top: 90px;
+	}
+	.advantage_contentleft .advantage_list{
+		margin-bottom: 150px;
+	}
+	
+}
+@media screen and (max-width: 1600px) { 
+	.package_box .overviewtit{
+		margin:80px 0 50px;
+	}
+}
+@media screen and (max-width: 1550px) { 
+	.advantage_content{
+		padding-top: 80px;
+		width: 900px;
+	}
+	.advantage_contentleft .advantage_list{
+		margin-bottom: 120px;
+	}
+	.advantage_contentright .advantage_list{
+		margin-bottom: 80px;
+	}
+}
+@media screen and (max-width: 1500px) { 
+	.officebox{
+		padding-top: 5%;
+	}
+	.office .overviewtit{
+		margin-bottom:50px;
+	}
+	.package_itemtop{
+		width: 200px;
+		height: 200px;
+	}
+	.package_img{
+		height: 50px;
+		margin:35px 0 15px;
+	}
+}
+@media screen and (max-width: 1450px) { 
+	.advantage_contentright .advantage_list{
+		margin-bottom: 60px;
+	}
+}
+@media screen and (max-width: 1400px) { 
+	.advantage_text{
+		font-size: 12px;
+		line-height: 25px;
+	}
+	.advantage_tit{
+		font-size: 18px;
+		margin-bottom: 8px;
+	}
+	.advantage_content{
+		width: 800px;
+	}
+	.advantage_content{
+		padding-top: 70px;
+	}
+}
+@media screen and (max-width: 1350px) {
+   .cwrap{
+	width: 90%;
+   }
+   .overview{
+	padding:100px 0;
+   }
+   .officeimg{
+	width: 80%;
+	margin:0 auto;
+   }
+   .overviewtit{
+	font-size: 28px;
+   }
+   .overviewdesc{
+	margin-bottom: 10px;
+   }
+   .overviewp{
+	width: 80%;
+    font-size: 12px;
+	line-height: 26px;
+   }
+   .director{
+	padding:100px 0 110px;
+   }
+   .directorlist{
+	margin-bottom: 60px;
+   }
+   .leftimg{
+	width: 60%;
+   }
+   .righttimg{
+	width: calc(40% - 20px);
+   }
+   .customer{
+	padding-bottom: 200px;
+   }
+ }
+ @media screen and (max-width: 1300px) {
+	.advantage_content{
+		padding-top:50px;
+	}
+	.advantage_contentleft .advantage_list{
+		margin-bottom: 80px;
+	}
+	.advantage_contentright .advantage_list{
+		margin-bottom: 45px;
+	}
+ }
+ @media screen and (max-width: 1250px) {
+	.business_list{
+		padding:20px;
+	}
+ }
+ @media screen and (max-width: 1220px) {
+	.advantage_content{
+		width: 700px;
+	}
+	.advantage_list img{
+		width: 45px;
+		margin-bottom: 15px;
+	}
+	.package_itemtop{
+		margin-bottom: 20px;
+	}
+	.package_itemtop{
+		width: 160px;
+		height: 160px;
+	}
+	.package_img{
+		height: 40px;
+		margin:25px 0 10px;
+	}
+	.package_itemtit{
+		font-size: 14px;
+		line-height: 25px;
+	}
+	.package_des{
+		font-size: 12px;
+		line-height: 24px;
+	}
+ }
+ @media screen and (max-width: 1200px) {
+	.business_list{
+		height: 220px;
+	}
+	.business_leftimg{
+		width: 55px;
+	}
+	.business_top{
+		margin-bottom: 50px;
+	}
+	.arrow{
+		width: 40px;
+		margin-top: 15px;
+	}
+	.business_back .business_bottom{
+		margin-bottom: 10px;
+	}
+	.business_back .business_tit{
+		margin-bottom: 5px;
+	}
+	.directorback{
+		padding:9%;
+	}
+ }
+ @media screen and (max-width: 1140px) {
+	.business_describeleft{
+		width: 57px;
+	}
+ }
+ @media screen and (max-width: 1080px) {
+	.advantage_list img{
+		width: 35px;
+	}
+	.advantage_tit{
+		font-size: 16px;
+	}
+	.advantage_contentleft .advantage_list{
+		margin-bottom: 60px;
+	}
+	.advantage_contentright .advantage_list{
+		margin-bottom: 30px;
+	}
+	.advantage_content{
+		width: 650px;
+	}
+	.package_box .overviewtit{
+		margin:60px 0 35px;
+	}
+	.business_back .business_describe{
+		font-size: 12px;
+	}
+ }
+ .pc{
+	display: block;
+}
+.phone{
+	display: none;
+}
+ @media screen and (max-width: 1050px) {
+	.directorback{
+		padding:7%;
+	}
+}
+ @media screen and (max-width: 1000px) {
+	.arrow{
+		width: 35px;
+		bottom:10px;
+		right: 10px;
+	}
+	.cwrap{
+		width: 92%;
+	}
+	.advantage_content{
+		width: 100%;
+	}
+	.package_content{
+		width: 92%;
+	}
+	.overview,.director{
+		padding:50px 0;
+	}
+	.overviewtit{
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+	.overviewdesc{
+		margin-bottom: 6px;
+	}
+	.overviewbox{
+		padding:50px 0 30px
+	}
+	.overviewtitle{
+		height: 38px;
+		margin:10px 0 4px;
+		font-size: 14px;
+	}
+	.overviewp{
+		width: 90%;
+	    line-height: 24px;
+	}
+	.overviewp .fl{
+		display: block;
+		float: none;
+	}
+	.overviewp .fr{
+		float: left;
+		display: block;
+	}
+	.directordesc{
+		font-size: 12px;
+		line-height: 24px;
+	}
+	.directorlist{
+		margin-bottom: 30px;
+	}
+	.directorname{
+		font-size: 15px;
+		margin:20px 0 10px;
+	}
+	.business_item{
+		font-size: 14px;
+		height: 32px;
+		line-height: 32px;
+		padding:0 25px;
+		margin-right:20px;
+	}
+	.business_tap{
+		margin-bottom: 30px;
+	}
+	.business_leftimg{
+		width: 40px;
+	}
+	.business_numberimg{
+		width: 40px;
+	}
+	.business_list{
+		width: 48%;
+		height: 200px;
+		padding:20px 10px;
+		margin-right: 4%;
+		margin-bottom: 20px;
+	}
+	.business_list:nth-child(2n){
+		margin-right: 0;
+	}
+	.business_tit{
+		font-size: 16px;
+	}
+	.business_describe{
+		font-size: 12px;
+		line-height: 22px;
+	}
+	.officebox{
+		padding-top: 20px;
+	}
+	.office .overviewtit{
+		margin-bottom: 10px;
+	}
+	.team_text{
+		padding:20px 15px;
+	}
+	.team_desc{
+		font-size: 12px;
+		line-height: 2;
+	}
+	.teamimg{
+		width: 80px;
+	}
+	.team_text{
+		width:calc(100% - 90px);
+	}
+	.team_tit{
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+	.team .overviewtit,.customer .overviewtit{
+		margin-bottom: 35px;
+	}
+	.team_img{
+		margin-bottom: 50px;
+	}
+	.customer{
+		padding-bottom: 80px;
+	}
+	.package{
+		overflow: hidden;
+	}
+	.packagebg{
+		height: 350px;
+	}
+	.package_box .overviewtit{
+		margin:35px 0 20px;
+	}
+	.package_itemtop{
+		width: 100px;
+		height: 100px;
+		margin-bottom: 15px;
+	}
+	.package_item{
+		width: 46%;
+		vertical-align: top;
+		margin-right: 5%;
+	}
+	.package_img{
+		height: 25px;
+		margin:15px 0 5px;
+	}
+	.package_itemtit{
+		font-size: 12px;
+		line-height: 18px;
+	}
+	.team{
+		padding-top: 50px;
+	}
+	.leftimg{
+		width: 59.5%;
+		margin-right: 10px;
+	}
+	.righttimg{
+		width:calc(40.5% - 10px);
+	}
+	.rbottomimg img{
+		width:calc(50% - 5px);
+	}
+	.rbottomimg_left{
+		margin-right: 10px;
+	}
+	.righttimgtop{
+		margin-bottom: 10px;
+	}
+	.pc{
+		display: none;
+	}
+	.phone{
+		width: 100%;
+		display: block;
+	}
+	.business_back .business_describe{
+		line-height: 20px;
+	}
+	.business_describeleft{
+		width: 46px;
+	}
+	
+ }
+ @media screen and (max-width: 800px) {
+	.directorlist{
+		width: 100%;
+	}
+	.director_backdesc p{
+		font-size: 12px;
+		line-height: 24px;
+	}
+	.directorlist:hover .directorback{
+		display: none;
+	}
+	.directorlist:hover .directorback{
+		display: none;
+	}
+ }
+    </style>
+</head>
+<body>
+    <div class="head pr">
+        <img class="headbg" src="images/head.png" alt="">
+        <img class="logo pa" src="images/wlogo.png" alt="">
+    </div>
+    <div class="content">
+        <div class="overview">
+            <div class="cwrap">
+                <div class="overviewtit">è¯ºå°çææ¦è§</div>
+                <div class="overviewdesc">è¯ºå°çæäº2013å¹´å¨ä¸­å½æç«</div>
+                <div class="overviewdesc">æä»¬ä¸»è¦èç¦äºä¸ºé«åå¼ä¸ªäºº/å®¶åº­/ä¼ä¸æä¾å¨é¢çå®¶æåå¬å®¤æå¡ï¼éç¹æ¶µç:</div>
+                <div class="overviewbox clearfix">
+                    <div class="overviewitem">
+                        <img class="overviewimg" src="images/plan1.png" alt="">
+                        <div class="overviewtitle">éäº§è§å</div>
+                        <div class="overviewp">Â· ç¨æ¶è§ååæªæ¥è´¢å¯ç»æè§å</div>
+                        <div class="overviewp">Â· ç§»æ°æºä¼(è¡èçãè¥¿ç­çãè±å½  å¸èãé©¬è³ä»ç­)</div>
+                    </div>
+                    <div class="overviewitem">
+                        <img class="overviewimg" src="images/plan2.png" alt="">
+                        <div class="overviewtitle">å½éæè²è§å</div>
+                        <div class="overviewp">Â· çå£«ãè±å½ãæå¤§å©ãè¥¿ç­çãè¡èçãä¸­å½</div>
+                        <div class="overviewp">Â· å¯å®¿å­¦æ ¡çå£«ãè±å½ãæ³å½ãè¥¿ç­çãè¡èçãæå¤§å©</div>
+                    </div>
+                    <div class="overviewitem">
+                        <img class="overviewimg" src="images/plan3.png" alt="">
+                        <div class="overviewtitle">æµ·å¤æèµåå¸åºéå®æ¨å¹¿ </div>
+                        <div class="overviewp clearfix">
+                            <span class="fl">Â· è±å½ çå£« æ¬§æ´²åå½</span>
+                            <span class="fr">Â· æ²ç¹é¿æä¼¯</span>
+                        </div>
+                        <div class="overviewp clearfix">
+                            <span class="fl">Â· é¿èé</span>
+                            <span class="fr">Â· ä¸­ä¸å°åº</span>
+                        </div>
+                    </div>
+                </div>
+                <img class="map" src="images/map.png" alt="">
+            </div>
+        </div>
+        <div class="director">
+            <div class="cwrap">
+                <div class="overviewtit">è¯ºå°çæè£äºä¼</div>
+                <div class="directorgroup clearfix">
+                    <div class="directorlist">
+                        <div class="directorform">
+                            <img src="images/director1.png" alt="" class="directorimg">
+                            <div class="directorname">å­å¥³å£«</div>
+                            <div class="directordesc">å­å¥³å£«åºçäºåäº¬ãå¨è¿å»ç20å¤å¹´éï¼å¥¹çæ´»å¨åäº¬åä¸æµ·ï¼è·å°ï¼çå£«ï¼é¿èéå¤å°ãå­å¥³å£«æ¥ææ·±åçå½éå³ç³»ç½ç»åä¸°å¯çå½éå¸åºéå®ç»éªï¼å¸¸å¹´ä¸ºå½åå¤é¡¶çº§ä¼ä¸åå½åç§äººå®¢æ·æä¾å®å¶å¨è¯¢æå¡......
+                            </div>
+                        </div>
+                        <div class="directorback">
+                            <div class="directorname">å­å¥³å£«</div>
+                            <div class="directordesc">å­å¥³å£«åºçäºåäº¬ãå¨è¿å»ç20å¤å¹´éï¼å¥¹çæ´»å¨åäº¬åä¸æµ·ï¼è·å°ï¼çå£«ï¼é¿èéå¤å°ãå­å¥³å£«æ¥ææ·±åçå½éå³ç³»ç½ç»åä¸°å¯çå½éå¸åºéå®ç»éªï¼å¸¸å¹´ä¸ºå½åå¤é¡¶çº§ä¼ä¸åå½åç§äººå®¢æ·æä¾å®å¶å¨è¯¢æå¡ã</div>
+                            <div class="director_backdesc">
+                                <p>å­å¥³å£«çèä½:</p>
+                                <p>Â· è¯ºå°çæå®¶æåå¬å®¤åå§åä¼äººå¼é¦å¸­æ§è¡å®</p>
+                                <p>Â· Inspired æè²éå¢ä¸­å½åºä»£è¡¨</p>
+                                <p>Â· çå£«æè²éå¢ä¸­å½åä½ä¼ä¼´</p>
+                                <p>Â· çå£«é¡¶çº§IBå½éå­¦æ ¡ä¸­å½ä»£è¡¨</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="directorlist">
+                        <div class="directorform">
+                            <img src="images/director2.png" alt="" class="directorimg">
+                            <div class="directorname">Erwin Verschueren</div>
+                            <div class="directordesc">å¨æç«è¯ºå°çæå®¶æåå¬å®¤ä¹Verschuerenåçæ¯äºæ´²æå¤§çå¤ç±äººå£«è´¢å¯ç®¡çå¬å¸ä¹ä¸çé«çº§åä¼äººåè¡ä¸ï¼ä»åä»çå¢éç®¡çç200å¤ä¸ªå®¶æçè´¢å¯ãä»çæ¬ä¸ç²¾ç¥ãå¯¹ç»èçå³æ³¨åå®¢æ·æå¡ï¼è®©å¬å¸è¬ååå±......
+                            </div>
+                        </div>
+                        <div class="directorback">
+                            <div class="directorname">Erwin Verschueren</div>
+                            <div class="directordesc">å¨æç«è¯ºå°çæå®¶æåå¬å®¤ä¹Verschuerenåçæ¯äºæ´²æå¤§çå¤ç±äººå£«è´¢å¯ç®¡çå¬å¸ä¹ä¸çé«çº§åä¼äººåè¡ä¸ï¼ä»åä»çå¢éç®¡çç200å¤ä¸ªå®¶æçè´¢å¯ãä»çæ¬ä¸ç²¾ç¥ãå¯¹ç»èçå³æ³¨åå®¢æ·æå¡ï¼è®©å¬å¸è¬ååå±ï¼çè³è·»èº«ä¸åæå·å½±ååçå¬å¸ä¹åã</div>
+                            <div class="directordesc">Verschuerenåçåºçäºè·å°ï¼æ¥æè¶è¿20å¤å¹´çè´¢å¯ç®¡çåæå¡ç»éªï¼æ¥æåºå¤§çå³ç³»ç½ï¼å¹¶ææé¦æ¸¯è¯å¸åæèµå¬ä¼èµäº§ç®¡çè¯ä¹¦ãä»å¨ä¸­å½å·¥ä½åçæ´»äº16å¹´ï¼å¨æ¬§æ´²åå½åä¸­ä¸é¿æç®¡çå¬å¸ä¸å¡ï¼å­åå¶å¼ºå¤§çæ¬§æ´²äººèåç¬ç¹çæèµå¨è¯¢è§éï¼ä¸ºå®¶æåå¬å®¤å®¢æ·æä¾äºç»ä½³çç¬ä¸æ äºçæèµæºä¼ï¼ç²¾é5å½è¯­è¨ã</div>
+                        </div>
+                    </div>
+                    <div class="directorlist">
+                        <div class="directorform">
+                            <img src="images/director3.png" alt="" class="directorimg">
+                            <div class="directorname">Vic Choi</div>
+                            <div class="directordesc">Choiåçæ¯ä¸äºé¦æ¸¯å¤§å­¦ï¼è·ä¼ä¸åéèæ³ç¡å£«å­¦ä½ãä»æ¯ä¸­åäººæ°å±åå½é¦æ¸¯ç¹å«è¡æ¿åºåè±å½è±æ ¼å°åå¨å°å£«çå¾å¸ã2007å¹´è³2014å¹´ï¼Choiåçæä»»æ±ä¸°ä¸­å½(ä¸­å½å¤§éæå¤§çå¤èµé¶è¡)å¯ä¸»ç®¡å¼åè§ä¸»ç®¡......
+                            </div>
+                        </div>
+                        <div class="directorback">
+                            <div class="directorname">Vic Choi</div>
+                            <div class="directordesc">Choiåçæ¯ä¸äºé¦æ¸¯å¤§å­¦ï¼è·ä¼ä¸åéèæ³ç¡å£«å­¦ä½ãä»æ¯ä¸­åäººæ°å±åå½é¦æ¸¯ç¹å«è¡æ¿åºåè±å½è±æ ¼å°åå¨å°å£«çå¾å¸ã2007å¹´è³2014å¹´ï¼Choiåçæä»»æ±ä¸°ä¸­å½(ä¸­å½å¤§éæå¤§çå¤èµé¶è¡)å¯ä¸»ç®¡å¼åè§ä¸»ç®¡ã
+                            </div>
+                            <div class="directordesc">Choiåçå¨æ³å¾åé¶è¡ä¸æ¥æç»éªä¸°å¯ä¸å¤åæ¨å´ãæ¾æ´¾é©»é¦æ¸¯ãä¼¦æ¦ãåäº¬ãä¸æµ·ç­å°ï¼æ¥æä¸°å¯çç®¡çç»éªåå½åå¤ç¤¾äº¤ç½ç»ãä»è¿è¢«é¦æ¸¯æ³é¢æå®ä¸ºå¤§å®éäº§æ§è¡äººï¼å¨éäº§äºå¡æ¹é¢ç»éªä¸°å¯ãç®åï¼Choiåçåçæä»»æ³å¾é¡¾é®ï¼ä¸ºè·¨å½ä¼ä¸åéèæºææä¾æ³å¾å¨è¯¢æå¡ã</div>
+                        </div>
+                    </div>
+                    <div class="directorlist">
+                        <div class="directorform">
+                            <img src="images/director4.png" alt="" class="directorimg">
+                            <div class="directorname">Ning SONG</div>
+                            <div class="directordesc">å®å®åçäºç¾å½æ¯ä¸;ä¸­å½æ³¨åä¼è®¡å¸ãè·ç»æµå­¦ç¡å£«ãæ³å­¦ç¡å£«å­¦ä½ãä»æ¾æä»»ä¸­å½å½éåä¼ç¨å¡å§åä¼æ§è¡ä¸»å¸­ãä»æ¯ä¼ä¸é¦å¸­ææ¯å®åä¼å¸¸å¡å¯ä¸»å¸­ãä¸­å½è´¢ç¨æ³å¾åä¼çäºãä¸­å½è¯å¸åè®ºåç¨å¡å§åä¼ä¸»å¸­......
+                            </div>
+                        </div>
+                        <div class="directorback">
+                            <div class="directorname">Ning SONG</div>
+                            <div class="directordesc">å®å®åçäºç¾å½æ¯ä¸;ä¸­å½æ³¨åä¼è®¡å¸ãè·ç»æµå­¦ç¡å£«ãæ³å­¦ç¡å£«å­¦ä½ãä»æ¾æä»»ä¸­å½å½éåä¼ç¨å¡å§åä¼æ§è¡ä¸»å¸­ãä»æ¯ä¼ä¸é¦å¸­ææ¯å®åä¼å¸¸å¡å¯ä¸»å¸­ãä¸­å½è´¢ç¨æ³å¾åä¼çäºãä¸­å½è¯å¸åè®ºåç¨å¡å§åä¼ä¸»å¸­;å®åçæ¾ä»»èåå¤§ä¼è®¡å¸äºå¡æä¹ä¸ï¼æä»»ä¸è¾¾éå¢ç¨å¡æ»çï¼æå¯¼ä¸è¾¾æµ·å¤æèµåå¹¶è´­é¡¹ç®(åæ¬:çå£«çæ¹ãç¾å½ä¼ å¥ãå°åº¦å·¥ä¸åç­é¡¹ç®)ç¨å¡ç­¹åçå®æãåå©20å¤ä½ä¸­å½å¯è±ªè¿è¡ç¨å¡ç­¹åï¼ä¸ºé¡¶çº§ä¼ä¸æä¾äºä¼å¤æåæ¡ä¾ã</div>
+                            <div class="directordesc">ç®åï¼å®åçæä»»ç¨å¡é¡¾é®ï¼ä¸ºä¼ä¸åä¸ªäººå®¶åº­æä¾ç¨å¡ç­¹åãåæ¶æä»»CTACéå¢çæ»è£ã</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="business">
+                    <div class="overviewtit">è¯ºå°çæçæå±ä¸å¡</div>
+                    <div class="business_tap">
+                        <div class="business_item on">å¨ç</div>
+                        <div class="business_item">é¿èé</div>
+                    </div>
+                    <div class="business_bigbox">
+                        <div class="business_group clearfix">
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business5.png" alt="" class="business_leftimg">
+                                        <img src="images/1.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">ç§»å±æå¡</div>
+                                        <div class="business_entit">Migration services</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">ç§»å±æå¡</div>
+                                        <div class="business_entit">Migration services</div>
+                                    </div>
+                                    <div class="business_describe clearfix">
+                                        <p class="fl business_describeleft">Â·è¡èç <br>
+                                            Â· è¥¿ç­ç<br>
+                                            Â· å¸è<br>
+                                            Â· çå£«</p>
+                                        <p class="fl">Â· é©¬è³ä»/å¡æµ¦è·¯æ¯<br>
+                                            Â· è±å½<br>
+                                            Â· å åæ¯ç¾¤å²<br>
+                                            Â· åè³å¶</p>
+                                    </div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/arrow.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business3.png" alt="" class="business_leftimg">
+                                        <img src="images/2.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">æè²æå¡</div>
+                                        <div class="business_entit">Educational services</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">æè²æå¡</div>
+                                        <div class="business_entit">Educational services</div>
+                                    </div>
+                                    <div class="business_describe">Â· å¤ä»¤è¥(çå£«/è±å½/è¥¿ç­çç­)</div>
+                                    <div class="business_describe">Â· å¬ä»¤è¥(çå£«/æ³å½/ä¸­ä¸)</div>
+                                    <div class="business_describe">Â· å¯å®¿å­¦æ ¡(çå£«/è±å½/è¡èç
+                                          /è¥¿ç­ç/æå¤§å©ç­)</div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/arrow2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business4.png" alt="" class="business_leftimg">
+                                        <img src="images/3.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">èµäº§æèµæå¡</div>
+                                        <div class="business_entit">Asset investment services</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">èµäº§æèµæå¡</div>
+                                        <div class="business_entit">Asset investment services</div>
+                                    </div>
+                                    <div class="business_describe">Â· è±å½å®å¶æèµæºä¼</div>
+                                    <div class="business_describe">Â· çå£«å®å¶æèµæºä¼</div>
+                                    <div class="business_describe">Â· ä¸­ä¸å®å¶æèµæºä¼</div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/globalon3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business6.png" alt="" class="business_leftimg">
+                                        <img src="images/4.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">å¨æ¬§æ´²/<br>ä¸­å½è´¢ç¨æ³åæå¡</div>
+                                        <div class="business_entit">Tax and Legal Services</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">å¨æ¬§æ´²/<br>ä¸­å½è´¢ç¨æ³åæå¡</div>
+                                        <div class="business_entit">Tax and Legal Services</div>
+                                    </div>
+                                    <div class="business_describe">Â· ä¸ºæ¥èªä¸åå½å®¶åèæ¯çä¼ä¸
+                                        åä¸ªäººæä¾å¨é¢çåå¡è´¢ç¨æ³
+                                        åæå¡
+                                    </div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/globalon4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="display: none;" class="business_group clearfix">
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business1.png" alt="" class="business_leftimg">
+                                        <img src="images/1.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">è¿ç§»æå¡</div>
+                                        <div class="business_entit">Migration Service</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">è¿ç§»æå¡</div>
+                                        <div class="business_entit">Migration Service</div>
+                                    </div>
+                                    <div class="business_describe">Â· é¿èé(ç¨æ¶) å±ç</div>
+                                    <div class="business_describe">Â· é»éç­¾è¯ / æèµç­¾è¯</div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/arrow.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business2.png" alt="" class="business_leftimg">
+                                        <img src="images/2.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">ä¼ä¸è®¾ç«</div>
+                                        <div class="business_entit">Enterprise Establishment</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">ä¼ä¸è®¾ç«</div>
+                                        <div class="business_entit">Enterprise Establishment</div>
+                                    </div>
+                                    <div class="business_describe">Â·  å¨é¿èéè®¾ç«<br>
+                                        ä¼ä¸åå¸åºæå±<br>
+                                        åå¡å¯¹æ¥æå¡</div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/arrow2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business3.png" alt="" class="business_leftimg">
+                                        <img src="images/3.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">æè²æå¡</div>
+                                        <div class="business_entit">Educational services</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">æè²æå¡</div>
+                                        <div class="business_entit">Educational services</div>
+                                    </div>
+                                    <div class="business_describe">Â· é¿èéçå½é<br>
+                                        ï¼å¯å®¿ï¼å­¦æ ¡</div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/arrow3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business_list">
+                                <div class="business_front">
+                                    <div class="business_top clearfix">
+                                        <img src="images/business4.png" alt="" class="business_leftimg">
+                                        <img src="images/4.png" alt="" class="business_numberimg">
+                                    </div>
+                                    <div class="business_bottom">
+                                        <div class="business_tit">è´¢äº§æèµæå¡</div>
+                                        <div class="business_entit">Property investment</div>
+                                    </div>
+                                </div>
+                                <div class="business_back">
+                                    <div class="business_bottom">
+                                        <div class="business_tit">è´¢äº§æèµæå¡</div>
+                                        <div class="business_entit">Property investment</div>
+                                    </div>
+                                    <div class="business_describe">Â· é¿èéçæ¿å°äº§æèµæºä¼<br>
+                                        åå¶ä»å¯æèµèµæº
+                                    </div>
+                                    <div class="arrowbox">
+                                        <img class="arrow" src="images/arrow4.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="office pr">
+            <img class="officebg" src="images/officebg.png" alt="">
+            <div class="cwrap officebox">
+                <div class="overviewtit">è¯ºå°çæå¨é¿èéåäºå¤</div>
+                <div class="officeimg clearfix">
+                    <img src="images/office1.png" alt="">
+                    <img src="images/office2.png" alt="">
+                    <img src="images/office3.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="advantage pr">
+            <img class="phone" src="images/circle.png" alt="">
+            <div class="pc">
+                <img class="advantagebg" src="images/advantagebg.png" alt="">
+                <div class="advantage_content pa">
+                        <div class="clearfix">
+                            <div class="fl advantage_contentleft">
+                                <div class="advantage_list">
+                                    <img src="images/advantage (1).png" alt="">
+                                    <div class="advantage_tit">åç«å½éæ§è¡å¬å¸</div>
+                                    <div class="advantage_text">Â· å½éæ³¨å</div>
+                                    <div class="advantage_text">Â· æ éå¶</div>
+                                    <div class="advantage_text">Â· å½éé¶è¡ç³»ç»</div>
+                                    <div class="advantage_text">Â· æ¬å°æé«5%çå¢å¼ç¨</div>
+                                    <div class="advantage_text">Â· å¨çä»»ä½å©æ¶¦æé«99%çç¨è´¹</div>
+                                    <div class="advantage_text">(éè¿èªç±è´¸ææ¸¯å¯åå)</div>
+                                </div>
+                                <div class="advantage_list">
+                                    <img src="images/advantage (4).png" alt="">
+                                    <div class="advantage_tit">æèµèªç±</div>
+                                    <div class="advantage_text">Â· æèµèªç±</div>
+                                    <div class="advantage_text">Â· ä»é¿èéè§¦è¾¾å¨çå¸åº</div>
+                                    <div class="advantage_text">Â· éè¿è¯ºå°çæçç½ç»è·å¾å½å°åå±åæèµæºä¼</div>
+                                    <div class="advantage_text">Â· é¶è¡åç®¡è¾ç½åå</div>
+                                </div>
+                            </div>
+                            <div class="fr advantage_contentright">
+                                <div class="advantage_list">
+                                    <img src="images/advantage (2).png" alt="">
+                                    <div class="advantage_tit">ç¨æ¶</div>
+                                    <div class="advantage_text">Â· æ ä¸ªäººæå¾ç¨</div>
+                                    <div class="advantage_text">Â· çº³ç¨å±çå¯è½</div>
+                                </div>
+                                <div class="advantage_list">
+                                    <img src="images/advantage (3).png" alt="">
+                                    <div class="advantage_tit">è´¢äº§æèµæå¡</div>
+                                    <div class="advantage_text">Â· é¿èéå®å¶æèµæºä¼</div>
+                                    <div class="advantage_text">Â· å¨æç®¡çæå¡</div>
+                                </div>
+                                <div class="advantage_list">
+                                    <img src="images/advantage (5).png" alt="">
+                                    <div class="advantage_tit">è¿ç§»/ç­¾è¯æå¡</div>
+                                    <div class="advantage_text">Â· é»éç­¾è¯ / æèµç­¾è¯ææ°¸å±</div>
+                                    <div class="advantage_text">Â· ä¸­å½éåºæç¥çå¯è½</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="package pr">
+            <img class="packagebg" src="images/package.png" alt="">
+            <div class="package_box pa">
+                <div class="overviewtit">é¿èéï¼ç¨æ¶ï¼å±çå¥é¤</div>
+                <div class="package_content">
+                    <div class="package_item">
+                        <div class="package_itemtop">
+                            <img src="images/package1.png" alt="" class="package_img">
+                            <div class="package_itemtit">ä¸ªäºº</div>
+                            <div class="package_itemtit">é¿èéå¥é¤</div>
+                        </div>
+                        <div class="package_des">1. é»éç­¾è¯ (2,000,000è¿ªæå§æ¿å°äº§æèµ)</div>
+                        <div class="package_des">2. æèµç­¾è¯(å¨é¿èéè®¾ç«ä¸ä¸ªå¬å¸)</div>
+                    </div>
+                    <div class="package_item">
+                        <div class="package_itemtop">
+                            <img src="images/package2.png" alt="" class="package_img">
+                            <div class="package_itemtit">ä¼ä¸</div>
+                            <div class="package_itemtit">é¿èéå¥é¤</div>
+                        </div>
+                        <div class="package_des">éè¿å¨é¿èéè®¾ç«ä¸ä¸ªå¬å¸</div>
+                        <div class="package_des">ä»èè·å¾æèµç­¾è¯</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team">
+            <div class="cwrap">
+                <div class="overviewtit">å¨é¿èéçæ³å¡æå¡å¢é</div>
+                <div class="team_list clearfix">
+                    <img class="teamimg fl" src="images/team (2).png" alt="">
+                    <div class="team_text fr">
+                        <div class="team_tit">Sali Jumah</div>
+                        <div class="team_desc">Saliæ¯è¾¾å¸é¾åä½ä¼ä¼´å¬å¸çåå§åä¼äººä¹ä¸ãå¥¹æ¯ä¸äºå¾·å½é·æ ¹æ¯å ¡å¤§å­¦ï¼è·å¾å¸æ³å­¦ä½ãå¥¹ä¸ºä¸­ä¸ååéå°åºå¤æçãé«ä»·å¼çãå½å°åå½éè¯è®¼åä»²è£çº çº·æä¾å¨è¯¢æå¡ãå¥¹çä¸é¿æ¯èµ·èæ³å¾æä»¶ãç´¢èµå£°æãå¤å¿å½åååï¼å¹¶å§ç»èèéä½å¯é¿åçè¯è®¼é£é©ã</div>
+                        <div class="team_desc">Saliæ¯çå£«é©»é¿å¸ææ¯å¤§ä½¿é¦çä¿¡æå¾å¸ãå¥¹ä¼è¯´å¾·è¯­ãè±è¯­ãé¿æä¼¯è¯­åæ³è¯­ã</div>
+                    </div>
+                </div>
+                <div class="team_list clearfix">
+                    <div class="team_text fl">
+                        <div class="team_tit">Clemens Daburon åå£«</div>
+                        <div class="team_desc">Clemensæ¯Deburonåä¼äººå¬å¸çåå§äººåç®¡çåä¼äººãä»æ¥æç»´ä¹çº³å¤§å­¦æ³å­¦å­¦ä½ï¼å¹¶ä»¥ä¼å¼æç»©éè¿äºå¥¥å°å©å¾å¸èµæ ¼èè¯ãä»è·å¾å½éæ³åå£«å­¦ä½ï¼å¹¶æèµæ ¼å¨è±æ ¼å°åå¨å°å£«æ§ä¸ãæ­¤å¤ï¼ä»è¿æ¥æå½éåå¡å­¦ä½</div>
+                        <div class="team_desc">ä»å¨ä¼ä¸èèµååä¸ååæ¹é¢çä¸ä¸ç¥è¯æå¯¼æ´ä¸ªä¸­ä¸å°åºçé¢å¯¼å³ç­èåå¾æåãClemensè·åå¨è¿ªæå½ééèä¸­å¿æ³é¢æ§ä¸ï¼å¹¶å¨ADCCACãè¿ªæå½éä»²è£ä¸­å¿åé¿èéè¯å¸åååç®¡çå±ä»£è¡¨å®¢æ·ãæ­¤å¤ï¼ä»æ¯è±æ ¼å°åå¨å°å£«çæ³¨åå¾å¸ã</div>
+                        <div class="team_desc">Clemensæ¯å¥¥å°å©é©»é¿å¸ææ¯å¤§ä½¿é¦æ­£å¼ä»»å½çä¿¡æå¾å¸ï¼ä¹æ¯å¥¥å°å©é©»è¿ªæåä¸çäºä¼çè£äºä¼æåãä»ä¼è¯´è±è¯­ãå¾·</div>
+                    </div>
+                    <img class="teamimg fr" src="images/team (1).png" alt="">
+                </div>
+                <div class="overviewtit">ä¼ä¸æå¡å¢é</div>
+                <img src="images/team.png" alt="" class="team_img">
+            </div>
+        </div>
+        <div class="customer pr">
+            <img class="customerbg pa" src="images/customerbg.png" alt="">
+            <div class="customer_content">
+                <div class="cwrap">
+                    <div class="overviewtit">å¨é¿èéåå©è¿çå®¢æ·</div>
+                    <div class="customer_imgbox">
+                        <div class="leftimg">
+                            <img src="images/customer1.png" alt="">
+                        </div>
+                        <div class="righttimg">
+                            <img class="righttimgtop" src="images/customer2.png" alt="">
+                            <div class="rbottomimg">
+                                <img class="rbottomimg_left" src="images/customer3.png" alt="">
+                                <img src="images/customer4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script>
+        $('.business_item').click(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+            $('.business_group').eq($(this).index()).show().siblings().hide();
+        })
+        $(document).ready(function() {
+        var windowWidth = $(window).width();
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+        if (windowWidth<=768 && isMobile) {
+            $('.directorlist').click(function(){
+                if($(this).find('.directorback').css('display') == 'none'){
+                    $(this).siblings().find('.directorback').hide();
+                    $(this).find('.directorback').show();
+                }else{
+                    $(this).siblings().find('.directorback').hide();
+                    $(this).find('.directorback').hide();
+                }
+            })
+            $('.business_list').click(function(){
+                if($(this).hasClass('on')){
+                    $(this).siblings().removeClass('on')
+                    $(this).removeClass('on')
+                }else{
+                    $(this).siblings().removeClass('on')
+                    $(this).toggleClass('on')
+                }
+            })
+        }
+    })
+        
+    </script>
+</body>
+</html>
